@@ -1,0 +1,312 @@
+{
+  "push": {
+    "changes": [
+      {
+        "forced": false,
+        "old": {
+          "name": "master",
+          "links": {
+            "commits": {
+              "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commits/master"
+            },
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/refs/branches/master"
+            },
+            "html": {
+              "href": "https://bitbucket.org/Aitem/ci3-public/branch/master"
+            }
+          },
+          "default_merge_strategy": "merge_commit",
+          "merge_strategies": [
+            "merge_commit",
+            "squash",
+            "fast_forward"
+          ],
+          "type": "branch",
+          "target": {
+            "rendered": {},
+            "hash": "462069878cda7c9bf10da3bbf4945811f03fb3c6",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/462069878cda7c9bf10da3bbf4945811f03fb3c6"
+              },
+              "html": {
+                "href": "https://bitbucket.org/Aitem/ci3-public/commits/462069878cda7c9bf10da3bbf4945811f03fb3c6"
+              }
+            },
+            "author": {
+              "raw": "Marat Surmashev <muradbei@gmail.com>",
+              "type": "author",
+              "user": {
+                "display_name": "Marat Surmashev",
+                "account_id": "557058:1f04e51d-1415-4921-8df7-366936f24d83",
+                "links": {
+                  "self": {
+                    "href": "https://api.bitbucket.org/2.0/users/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D"
+                  },
+                  "html": {
+                    "href": "https://bitbucket.org/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D/"
+                  },
+                  "avatar": {
+                    "href": "https://secure.gravatar.com/avatar/b66f6a6cf1a4277a00f0b35ca08604c2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FMS-3.png"
+                  }
+                },
+                "nickname": "Aitem",
+                "type": "user",
+                "uuid": "{9da370f6-084c-4870-9d00-00e49ad5416c}"
+              }
+            },
+            "summary": {
+              "raw": "README.md edited online with Bitbucket",
+              "markup": "markdown",
+              "html": "<p>README.md edited online with Bitbucket</p>",
+              "type": "rendered"
+            },
+            "parents": [
+              {
+                "hash": "d6d601b11a5f99d213b063fea702ecfeae03e888",
+                "type": "commit",
+                "links": {
+                  "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/d6d601b11a5f99d213b063fea702ecfeae03e888"
+                  },
+                  "html": {
+                    "href": "https://bitbucket.org/Aitem/ci3-public/commits/d6d601b11a5f99d213b063fea702ecfeae03e888"
+                  }
+                }
+              }
+            ],
+            "date": "2019-12-26T11:07:21+00:00",
+            "message": "README.md edited online with Bitbucket",
+            "type": "commit",
+            "properties": {}
+          }
+        },
+        "links": {
+          "commits": {
+            "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commits?include=e48358891110c3a8844c6d7137146d20a5f0ce9b&exclude=462069878cda7c9bf10da3bbf4945811f03fb3c6"
+          },
+          "html": {
+            "href": "https://bitbucket.org/Aitem/ci3-public/branches/compare/e48358891110c3a8844c6d7137146d20a5f0ce9b..462069878cda7c9bf10da3bbf4945811f03fb3c6"
+          },
+          "diff": {
+            "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/diff/e48358891110c3a8844c6d7137146d20a5f0ce9b..462069878cda7c9bf10da3bbf4945811f03fb3c6"
+          }
+        },
+        "created": false,
+        "commits": [
+          {
+            "rendered": {},
+            "hash": "e48358891110c3a8844c6d7137146d20a5f0ce9b",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/e48358891110c3a8844c6d7137146d20a5f0ce9b"
+              },
+              "comments": {
+                "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/e48358891110c3a8844c6d7137146d20a5f0ce9b/comments"
+              },
+              "patch": {
+                "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/patch/e48358891110c3a8844c6d7137146d20a5f0ce9b"
+              },
+              "html": {
+                "href": "https://bitbucket.org/Aitem/ci3-public/commits/e48358891110c3a8844c6d7137146d20a5f0ce9b"
+              },
+              "diff": {
+                "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/diff/e48358891110c3a8844c6d7137146d20a5f0ce9b"
+              },
+              "approve": {
+                "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/e48358891110c3a8844c6d7137146d20a5f0ce9b/approve"
+              },
+              "statuses": {
+                "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/e48358891110c3a8844c6d7137146d20a5f0ce9b/statuses"
+              }
+            },
+            "author": {
+              "raw": "Marat Surmashev <muradbei@gmail.com>",
+              "type": "author",
+              "user": {
+                "display_name": "Marat Surmashev",
+                "account_id": "557058:1f04e51d-1415-4921-8df7-366936f24d83",
+                "links": {
+                  "self": {
+                    "href": "https://api.bitbucket.org/2.0/users/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D"
+                  },
+                  "html": {
+                    "href": "https://bitbucket.org/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D/"
+                  },
+                  "avatar": {
+                    "href": "https://secure.gravatar.com/avatar/b66f6a6cf1a4277a00f0b35ca08604c2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FMS-3.png"
+                  }
+                },
+                "nickname": "Aitem",
+                "type": "user",
+                "uuid": "{9da370f6-084c-4870-9d00-00e49ad5416c}"
+              }
+            },
+            "summary": {
+              "raw": "README.md edited online with Bitbucket",
+              "markup": "markdown",
+              "html": "<p>README.md edited online with Bitbucket</p>",
+              "type": "rendered"
+            },
+            "parents": [
+              {
+                "hash": "462069878cda7c9bf10da3bbf4945811f03fb3c6",
+                "type": "commit",
+                "links": {
+                  "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/462069878cda7c9bf10da3bbf4945811f03fb3c6"
+                  },
+                  "html": {
+                    "href": "https://bitbucket.org/Aitem/ci3-public/commits/462069878cda7c9bf10da3bbf4945811f03fb3c6"
+                  }
+                }
+              }
+            ],
+            "date": "2019-12-26T11:08:02+00:00",
+            "message": "README.md edited online with Bitbucket",
+            "type": "commit",
+            "properties": {}
+          }
+        ],
+        "truncated": false,
+        "closed": false,
+        "new": {
+          "name": "master",
+          "links": {
+            "commits": {
+              "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commits/master"
+            },
+            "self": {
+              "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/refs/branches/master"
+            },
+            "html": {
+              "href": "https://bitbucket.org/Aitem/ci3-public/branch/master"
+            }
+          },
+          "default_merge_strategy": "merge_commit",
+          "merge_strategies": [
+            "merge_commit",
+            "squash",
+            "fast_forward"
+          ],
+          "type": "branch",
+          "target": {
+            "rendered": {},
+            "hash": "228ff88162933626efaa82ce3b70b58546824548",
+            "links": {
+              "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/e48358891110c3a8844c6d7137146d20a5f0ce9b"
+              },
+              "html": {
+                "href": "https://bitbucket.org/Aitem/ci3-public/commits/e48358891110c3a8844c6d7137146d20a5f0ce9b"
+              }
+            },
+            "author": {
+              "raw": "Aitem",
+              "type": "author",
+              "user": {
+                "display_name": "Marat Surmashev",
+                "account_id": "557058:1f04e51d-1415-4921-8df7-366936f24d83",
+                "links": {
+                  "self": {
+                    "href": "https://api.bitbucket.org/2.0/users/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D"
+                  },
+                  "html": {
+                    "href": "https://bitbucket.org/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D/"
+                  },
+                  "avatar": {
+                    "href": "https://secure.gravatar.com/avatar/b66f6a6cf1a4277a00f0b35ca08604c2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FMS-3.png"
+                  }
+                },
+                "nickname": "Aitem",
+                "type": "user",
+                "uuid": "{9da370f6-084c-4870-9d00-00e49ad5416c}"
+              }
+            },
+            "summary": {
+              "raw": "add hook payload",
+              "markup": "markdown",
+              "html": "<p>README.md edited online with Bitbucket</p>",
+              "type": "rendered"
+            },
+            "parents": [
+              {
+                "hash": "462069878cda7c9bf10da3bbf4945811f03fb3c6",
+                "type": "commit",
+                "links": {
+                  "self": {
+                    "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public/commit/462069878cda7c9bf10da3bbf4945811f03fb3c6"
+                  },
+                  "html": {
+                    "href": "https://bitbucket.org/Aitem/ci3-public/commits/462069878cda7c9bf10da3bbf4945811f03fb3c6"
+                  }
+                }
+              }
+            ],
+            "date": "2019-12-26T11:08:02+00:00",
+            "message": "README.md edited online with Bitbucket",
+            "type": "commit",
+            "properties": {}
+          }
+        }
+      }
+    ]
+  },
+  "actor": {
+    "display_name": "Marat Surmashev",
+    "account_id": "557058:1f04e51d-1415-4921-8df7-366936f24d83",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/users/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D"
+      },
+      "html": {
+        "href": "https://bitbucket.org/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D/"
+      },
+      "avatar": {
+        "href": "https://secure.gravatar.com/avatar/b66f6a6cf1a4277a00f0b35ca08604c2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FMS-3.png"
+      }
+    },
+    "nickname": "Aitem",
+    "type": "user",
+    "uuid": "{9da370f6-084c-4870-9d00-00e49ad5416c}"
+  },
+  "repository": {
+    "scm": "git",
+    "website": "",
+    "name": "ci3-public",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/Aitem/ci3-public"
+      },
+      "html": {
+        "href": "https://github.com/niquola/c3.git"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B6d21d2f1-41e9-468c-91e5-7125624fbed9%7D?ts=default"
+      }
+    },
+    "full_name": "Aitem/ci3-public",
+    "owner": {
+      "display_name": "Marat Surmashev",
+      "account_id": "557058:1f04e51d-1415-4921-8df7-366936f24d83",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/users/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D"
+        },
+        "html": {
+          "href": "https://bitbucket.org/%7B9da370f6-084c-4870-9d00-00e49ad5416c%7D/"
+        },
+        "avatar": {
+          "href": "https://secure.gravatar.com/avatar/b66f6a6cf1a4277a00f0b35ca08604c2?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FMS-3.png"
+        }
+      },
+      "nickname": "Aitem",
+      "type": "user",
+      "uuid": "{9da370f6-084c-4870-9d00-00e49ad5416c}"
+    },
+    "type": "repository",
+    "is_private": false,
+    "uuid": "{6d21d2f1-41e9-468c-91e5-7125624fbed9}"
+  }
+}

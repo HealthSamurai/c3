@@ -1,30 +1,67 @@
 {
-  "zen": "Half measures are as bad as nothing at all.",
-  "hook_id": 130230960,
-  "hook": {
-    "type": "Repository",
-    "id": 130230960,
-    "name": "web",
-    "active": true,
-    "events": [
-      "push"
-    ],
-    "config": {
-      "content_type": "json",
-      "insecure_ssl": "0",
-      "secret": "********",
-      "url": "https://c3.health-samurai.io/"
-    },
-    "updated_at": "2019-08-08T21:53:24Z",
-    "created_at": "2019-08-08T21:53:24Z",
-    "url": "https://api.github.com/repos/niquola/c3/hooks/130230960",
-    "test_url": "https://api.github.com/repos/niquola/c3/hooks/130230960/test",
-    "ping_url": "https://api.github.com/repos/niquola/c3/hooks/130230960/pings",
-    "last_response": {
-      "code": null,
-      "status": "unused",
-      "message": null
+  "ref": "refs/heads/master",
+  "before": "86789f0eedd4405b34676279ef65758e3faf34a5",
+  "after": "228ff88162933626efaa82ce3b70b58546824548",
+  "created": false,
+  "deleted": false,
+  "forced": false,
+  "base_ref": null,
+  "compare": "https://github.com/niquola/c3/compare/86789f0eedd4...228ff8816293",
+  "commits": [
+    {
+      "id": "228ff88162933626efaa82ce3b70b58546824548",
+      "tree_id": "d55dce2cc7d48370af6771fb9160be7adff048e6",
+      "distinct": true,
+      "message": "add hook payload",
+      "timestamp": "2019-08-09T00:54:22+03:00",
+      "url": "https://github.com/niquola/c3/commit/228ff88162933626efaa82ce3b70b58546824548",
+      "author": {
+        "name": "niquola",
+        "email": "niquola@gmail.com",
+        "username": "niquola"
+      },
+      "committer": {
+        "name": "niquola",
+        "email": "niquola@gmail.com",
+        "username": "niquola"
+      },
+      "added": [
+        "test/fixtures/payload.json"
+      ],
+      "removed": [
+
+      ],
+      "modified": [
+
+      ]
     }
+  ],
+  "head_commit": {
+    "id": "228ff88162933626efaa82ce3b70b58546824548",
+    "tree_id": "d55dce2cc7d48370af6771fb9160be7adff048e6",
+    "distinct": true,
+    "message": "add hook payload",
+    "timestamp": "2019-08-09T00:54:22+03:00",
+    "url": "https://github.com/niquola/c3/commit/228ff88162933626efaa82ce3b70b58546824548",
+    "author": {
+      "name": "Aitem",
+      "email": "niquola@gmail.com",
+      "username": "niquola"
+    },
+    "committer": {
+      "name": "niquola",
+      "email": "niquola@gmail.com",
+      "username": "niquola"
+    },
+    "added": [
+      "test/fixtures/payload.json"
+    ],
+    "removed": [
+
+    ],
+    "modified": [
+
+    ]
   },
   "repository": {
     "id": 200093750,
@@ -33,6 +70,8 @@
     "full_name": "niquola/c3",
     "private": false,
     "owner": {
+      "name": "niquola",
+      "email": "niquola@gmail.com",
       "login": "niquola",
       "id": 32066,
       "node_id": "MDQ6VXNlcjMyMDY2",
@@ -55,7 +94,7 @@
     "html_url": "https://github.com/niquola/c3",
     "description": "ci/cd for k8s",
     "fork": false,
-    "url": "https://api.github.com/repos/niquola/c3",
+    "url": "https://github.com/niquola/c3",
     "forks_url": "https://api.github.com/repos/niquola/c3/forks",
     "keys_url": "https://api.github.com/repos/niquola/c3/keys{/key_id}",
     "collaborators_url": "https://api.github.com/repos/niquola/c3/collaborators{/collaborator}",
@@ -92,9 +131,9 @@
     "labels_url": "https://api.github.com/repos/niquola/c3/labels{/name}",
     "releases_url": "https://api.github.com/repos/niquola/c3/releases{/id}",
     "deployments_url": "https://api.github.com/repos/niquola/c3/deployments",
-    "created_at": "2019-08-01T17:35:54Z",
+    "created_at": 1564680954,
     "updated_at": "2019-08-08T21:51:03Z",
-    "pushed_at": "2019-08-08T21:51:01Z",
+    "pushed_at": 1565301276,
     "git_url": "git://github.com/niquola/c3.git",
     "ssh_url": "git@github.com:niquola/c3.git",
     "clone_url": "https://github.com/niquola/c3.git",
@@ -124,7 +163,13 @@
     "forks": 1,
     "open_issues": 1,
     "watchers": 3,
-    "default_branch": "master"
+    "default_branch": "master",
+    "stargazers": 3,
+    "master_branch": "master"
+  },
+  "pusher": {
+    "name": "niquola",
+    "email": "niquola@gmail.com"
   },
   "sender": {
     "login": "niquola",

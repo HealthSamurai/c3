@@ -1,0 +1,110 @@
+{
+  "secret": "sssrsrsrsrsrsrsrsrsr",
+  "ref": "refs/heads/master",
+  "before": "fb898ad794a89eac2c2cb330e32a68bcdd569ecf",
+  "after": "fb898ad794a89eac2c2cb330e32a68bcdd569ecf",
+  "compare_url": "",
+  "commits": [
+    {
+      "id": "228ff88162933626efaa82ce3b70b58546824548",
+      "message": "add hook payload",
+      "url": "https://git.rmis.med.cap.ru/Alkona/rmis/commit/fb898ad794a89eac2c2cb330e32a68bcdd569ecf",
+      "author": {
+        "name": "Aitem",
+        "email": "murgmail.com",
+        "username": ""
+      },
+      "committer": {
+        "name": "Aitem",
+        "email": "muramail.com",
+        "username": ""
+      },
+      "verification": null,
+      "timestamp": "0001-01-01T00:00:00Z",
+      "added": null,
+      "removed": null,
+      "modified": null
+    }
+  ],
+  "head_commit": null,
+  "repository": {
+    "id": 3,
+    "owner": {
+      "id": 5,
+      "login": "Alkona",
+      "full_name": "",
+      "email": "",
+      "avatar_url": "https://git.rmis.med.cap.ru/user/avatar/Alkona/-1",
+      "language": "",
+      "is_admin": false,
+      "last_login": "1970-01-01T00:00:00Z",
+      "created": "2019-12-19T16:46:17Z",
+      "username": "Alkona"
+    },
+    "name": "rmis",
+    "full_name": "Alkona/rmis",
+    "description": "",
+    "empty": false,
+    "private": false,
+    "fork": false,
+    "parent": null,
+    "mirror": false,
+    "size": 9146,
+    "html_url": "https://git.rmis.med.cap.ru/Alkona/rmis",
+    "ssh_url": "ssh://git@rmis.med.cap.ru:32010/Alkona/rmis.git",
+    "clone_url": "https://git.rmis.med.cap.ru/Alkona/rmis.git",
+    "original_url": "",
+    "website": "https://rmis.med.cap.ru",
+    "stars_count": 1,
+    "forks_count": 0,
+    "watchers_count": 7,
+    "open_issues_count": 0,
+    "default_branch": "master",
+    "archived": false,
+    "created_at": "2019-12-20T12:51:18Z",
+    "updated_at": "2019-12-23T10:24:04Z",
+    "permissions": {
+      "admin": false,
+      "push": false,
+      "pull": false
+    },
+    "has_issues": true,
+    "internal_tracker": {
+      "enable_time_tracker": true,
+      "allow_only_contributors_to_track_time": true,
+      "enable_issue_dependencies": true
+    },
+    "has_wiki": true,
+    "has_pull_requests": true,
+    "ignore_whitespace_conflicts": false,
+    "allow_merge_commits": true,
+    "allow_rebase": true,
+    "allow_rebase_explicit": true,
+    "allow_squash_merge": true,
+    "avatar_url": ""
+  },
+  "pusher": {
+    "id": 4,
+    "login": "aitem",
+    "full_name": " Сурмашев Марат",
+    "email": "muradbei@gmail.com",
+    "avatar_url": "https://git.rmis.med.cap.ru/user/avatar/aitem/-1",
+    "language": "en-US",
+    "is_admin": true,
+    "last_login": "2019-12-23T08:50:03Z",
+    "created": "2019-12-19T16:45:20Z",
+    "username": "aitem"
+  },
+  "sender": {
+    "id": 4,
+    "login": "aitem",
+    "full_name": " Сурмашев Марат",
+    "email": "muradbei@gmail.com",
+    "avatar_url": "https://git.rmis.med.cap.ru/user/avatar/aitem/-1",
+    "language": "en-US",
+    "is_admin": true,
+    "last_login": "2019-12-23T08:50:03Z",
+    "created": "2019-12-19T16:45:20Z",
+    "username": "aitem"
+  }
+}
