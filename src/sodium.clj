@@ -30,17 +30,3 @@
                                (.toBinary @lib nonce)
                                (Key/fromHexString key))
      (catch SodiumException e))))
-
-(comment
-  (def k (gen-key))
-  (encrypt k "")
-  (def ct (encrypt k "hello"))
-  (decrypt k ct)
-  (decrypt k "bullshit")
-  ;; Wrong ciphertext
-  (decrypt k "68BC15939981BF8F26EF69E076DBC39DE13370274B4AFEC3.132966F8074CDD63C0869A91B3EADFFBBF7A59B874")
-
-
-  (def ct (encrypt k "{\"fo\": \"bar\"}"))
-  (decrypt k ct)
-  )

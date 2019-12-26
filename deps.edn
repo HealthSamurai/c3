@@ -2,21 +2,14 @@
  :extra-paths ["resources"]
  :mvn/repos
  {"lazysodium" {:url "https://dl.bintray.com/terl/lazysodium-maven"}}
- :deps {
-        org.clojure/clojure            {:mvn/version "1.10.0"}
+ :deps {org.clojure/clojure            {:mvn/version "1.10.0"}
         cheshire                       {:mvn/version "5.7.1"}
-        clj-json-patch                 {:mvn/version "0.1.4"}
-        stylefruits/gniazdo            {:mvn/version "1.1.1"}
         http-kit                       {:mvn/version "2.4.0-alpha3"}
         clj-commons/clj-yaml           {:mvn/version "0.7.0"}
-        clj-time                       {:mvn/version "0.13.0"}
-        healthsamurai/matcho           {:mvn/version "0.3.3"}
-        com.sun.xml.bind/jaxb-core     {:mvn/version "2.3.0.1"}
-        clojure-humanize               {:mvn/version "0.2.2"}
-        com.sun.xml.bind/jaxb-impl     {:mvn/version "2.3.2"}
-        javax.xml.bind/jaxb-api        {:mvn/version "2.4.0-b180830.0359"}
         io.kubernetes/client-java      {:mvn/version "5.0.0"}
-        com.goterl.lazycode/lazysodium-java {:mvn/version "4.0.0"}}
+        com.goterl.lazycode/lazysodium-java {:mvn/version "4.0.0"}
+
+        clojure-humanize               {:mvn/version "0.2.2"}}
 
  :aliases {:nrepl
            {:extra-paths ["dev" "test"]
@@ -25,7 +18,8 @@
                          refactor-nrepl/refactor-nrepl {:mvn/version "2.4.0"}}}
 
            :test {:extra-paths ["test"]
-                  :extra-deps {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner"
+                  :extra-deps {healthsamurai/matcho          {:mvn/version "0.3.3"}
+                               com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner"
                                                           :sha     "3cb0a9daf1cb746259dc8309b218f9211ad3b33b"}}
                   :jvm-opts ^:replace ["-XX:-OmitStackTraceInFastThrow" ]
                   :main-opts ["-m" "cognitect.test-runner"]}
