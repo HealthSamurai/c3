@@ -1,4 +1,4 @@
-FROM openjdk:11-jre
+FROM bellsoft/liberica-openjdk-alpine:13
 
 ADD target/c3-0.0.1-standalone.jar /c3.jar
 

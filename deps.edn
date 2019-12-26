@@ -40,4 +40,5 @@
                          "--app-group-id" "c3"
                          "--app-artifact-id" "c3"
                          "--app-version" "0.0.1"
+                         "--no-copy-source"
                          "-m" "c3"]}}}
