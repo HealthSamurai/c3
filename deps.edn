@@ -12,11 +12,11 @@
         clj-time                       {:mvn/version "0.13.0"}
         healthsamurai/matcho           {:mvn/version "0.3.3"}
         com.sun.xml.bind/jaxb-core     {:mvn/version "2.3.0.1"}
+        clojure-humanize               {:mvn/version "0.2.2"}
         com.sun.xml.bind/jaxb-impl     {:mvn/version "2.3.2"}
         javax.xml.bind/jaxb-api        {:mvn/version "2.4.0-b180830.0359"}
         io.kubernetes/client-java      {:mvn/version "5.0.0"}
-        com.goterl.lazycode/lazysodium-java {:mvn/version "4.0.0"}
-        }
+        com.goterl.lazycode/lazysodium-java {:mvn/version "4.0.0"}}
 
  :aliases {:nrepl
            {:extra-paths ["dev" "test"]

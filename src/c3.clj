@@ -20,21 +20,6 @@
    io.kubernetes.client.Exec)
   (:gen-class))
 
-(defonce client (atom nil))
-
-
-
-(defn exec [cl ns pod cmd]
-  (let [exec (io.kubernetes.client.Exec. cl)
-        proc (.exec exec ns pod  (into-array cmd) true true)
-        out (-> proc
-                .getInputStream
-                java.io.InputStreamReader.
-                java.io.BufferedReader.)]
-    (loop []
-      (when-let [ l (.readLine out)]
-        (println l)
-        (recur)))))
 
 (defn gh-file-req [url key commit file]
   {:query-params {:ref commit}
@@ -42,16 +27,14 @@
    :headers {"Authorization" (str "token " key)
              "Accept" "application/vnd.github.v3.raw"}})
 
+
 (defn hello [ctx req]
-  {:status 300
+  {:status 200
    :body "
 <html>
-
 <body>
 <center><h1>Welcome to C3</h1></center>
 </body>
-
-
 </html>"})
 
 (defn parse-params [qs]
@@ -63,8 +46,9 @@
 (defn hook [{secret :secret {*http :http *tel :telegram} :fx :as ctx} {params :params body :body :as req}]
   (let [body (cheshire.core/parse-string body keyword)
         url  (str/replace (get-in body [:repository :contents_url]) #"\{\+path\}$" "/")
-        ref "master"
+        ref  (-> body :commits last :id) 
         key (sodium/decrypt secret (:key params))
+        url (-> body :commits last) 
         c3 (*http ctx (gh-file-req url key ref "c3.yaml"))]
 
     (when *tel
@@ -130,6 +114,5 @@
 
   (def srv (start {:port 8668 :secret (get-secret)}))
   (srv)
-
 
   )

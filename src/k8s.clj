@@ -1,6 +1,7 @@
 (ns k8s
   (:require [cheshire.core]
             [clj-yaml.core]
+            [clojure.contrib.humanize :as humanize]
             [org.httpkit.client]
             [clojure.string :as str])
   (:import
@@ -24,14 +25,32 @@
        (.getBytes encoding)
        (java.io.ByteArrayInputStream.))))
 
-(defn ctx-for [cfg]
-  (let [cl     (io.kubernetes.client.util.Config/fromConfig (string->stream cfg))
-        token  (-> (.get (.getAuthentications cl) "BearerToken")
-                (.getApiKey))
-        base   (.getBasePath cl)]
-    {:req-ops {:headers {"Authorization" (str "Bearer " token)}}
-     :base base
-     :client cl}))
+(defn ctx-for
+  ([cfg]
+   (let [cl     (io.kubernetes.client.util.Config/fromConfig (string->stream cfg))
+         token  (-> (.get (.getAuthentications cl) "BearerToken")
+                    (.getApiKey))
+         base   (.getBasePath cl)]
+     {:req-ops {:headers {"Authorization" (str "Bearer " token)}}
+      :base base
+      :client cl}))
+  ([url token]
+   (let [cl     (io.kubernetes.client.util.Config/fromToken url token true)
+         token  (-> (.get (.getAuthentications cl) "BearerToken")
+                    (.getApiKey))
+         base   (.getBasePath cl)]
+     {:req-ops {:headers {"Authorization" (str "Bearer " token)}}
+      :base base
+      :client cl}))
+  ([url token validatessl]
+   (let [cl     (io.kubernetes.client.util.Config/fromToken url token validatessl)
+         token  (-> (.get (.getAuthentications cl) "BearerToken")
+                    (.getApiKey))
+         base   (.getBasePath cl)]
+     {:req-ops {:headers {"Authorization" (str "Bearer " token)}}
+      :base base
+      :client cl}))
+  )
 
 (defn api-req [ctx opts]
   (let [resp @(org.httpkit.client/request
@@ -55,29 +74,52 @@
                 :headers {"Content-Type" "application/json"}
                 :body (cheshire.core/generate-string res)}))
 
-(defn exec [{cl :client :as ctx} ns pod cnt cmd]
+(defn exec [{cl :client :as ctx} ns pod cnt cmd & [writer]]
   (let [exec (io.kubernetes.client.Exec. cl)
+        start (System/nanoTime)
         proc (.exec exec ns pod (into-array cmd) cnt true true)
         out (-> proc
                 .getInputStream
                 java.io.InputStreamReader.
                 java.io.BufferedReader.)]
+    (when writer
+      (.write writer (str "~ " cnt ": " (str/join " " (or cmd []))))
+      (.newLine writer))
     (loop []
       (when-let [ l (.readLine out)]
         (println l)
-        (recur)))))
+        (when writer
+          (.write writer l)
+          (.newLine writer)
+          )
+        (recur)))
+    (when writer
+      (.write writer (str "# Execution time: " (humanize/duration (/ (- (System/nanoTime) start) 1000000) {:number-format str})))
+      (.newLine writer)
+      (.newLine writer))
+    ))
 
 
 
 (comment
 
+
+
+  (with-open [w (clojure.java.io/writer "buildit.log")]
+    (exec ctx "dev" "buildit" "main" ["sh" "-c" "ls -lah /c3"] w)
+    (exec ctx "dev" "buildit" "kaniko" ["sh" "-c" "ls -l /c3"] w)
+    (exec ctx "dev" "buildit" "kaniko" ["sh" "-c" "sleep 2"] w)
+    )
+
+
   (def ctx (ctx-for (slurp "keys/k8s.yaml")))
+
 
   (spit "/tmp/c3.yaml"
         (clj-yaml.core/generate-string c3))
 
   (def c3
-    {:k8s (slurp "keys/k8s.yaml")
+    {;; :k8s (slurp "keys/k8s.yaml")
      :job {:apiVersion "v1"
            :kind "Pod"
            :metadata {:name "buildit"
@@ -125,17 +167,22 @@
 
   ctx
 
+  (api-get ctx "/api/v1/namespaces/dev/pods")
+
   (api-get ctx "/api/v1/namespaces/default/pods")
 
   (api-get ctx "/api/v1/namespaces/default/pods/buildit")
 
-  (api-post ctx "/api/v1/namespaces/default/pods" (:job c3))
+  (api-post ctx "/api/v1/namespaces/dev/pods" (:job c3))
 
   (api-delete ctx "/api/v1/namespaces/default/pods/buildit")
 
-  (exec ctx "default" "buildit" "main" ["bash" "-c" "ls -lah /c3"])
 
-  (exec ctx "default" "buildit" "git"
+  (exec ctx "dev" "buildit" "main" ["bash" "-c" "ls -lah /c3"])
+
+
+
+  (exec ctx "dev" "buildit" "git"
         ["sh" "-c" "git clone https://<token>@github.com/HealthSamurai/inc.git /c3/project "])
 
   (exec ctx "default" "buildit" "git"
@@ -154,7 +201,7 @@ ls -lah /c3/project
 
   (exec ctx "default" "buildit" "clj" ["sh" "-c" "cd /c3/project && clojure -A:build"])
 
-  (exec ctx "default" "buildit" "kube" ["sh" "-c" "kubectl get pods"])
+  (exec ctx "dev" "buildit" "kube" ["sh" "-c" "kubectl get pods"])
 
 
 
