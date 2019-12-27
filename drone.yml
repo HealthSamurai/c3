@@ -9,3 +9,11 @@ steps:
   commands:
   - clojure -A:test
   - clojure -A:build
+- name: send telegram notification
+  image: appleboy/drone-telegram
+  settings:
+    token:
+      from_secret: bot
+    to:
+      from_secret: chat
+    format: markdown
