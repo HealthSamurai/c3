@@ -1,9 +1,10 @@
+---
 kind: pipeline
-type: kubernetes
 name: default
 
 steps:
-- name: test
+- name: backend
   image: clojure
   commands:
   - clojure -A:test
+  - clojure -A:build
