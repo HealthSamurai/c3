@@ -3,8 +3,8 @@ kind: pipeline
 name: default
 
 steps:
-- name: backend
-  image: clojure
+- name: clojure
+  image: docker pull clojure:openjdk-14-tools-deps-buster
   commands:
-  - clj -A:test
-  - clj -A:build
+  - clojure -A:test
+  - clojure -A:build
