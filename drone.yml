@@ -4,33 +4,8 @@ name: default
 
 steps:
 
-
-- name: restore-cache
-  image: drillster/drone-volume-cache
-  volumes:
-  - name: cache
-    path: /cache
-  settings:
-    restore: true
-    mount:
-      - ~/.m2
 - name: clojure
   image: clojure:openjdk-14-tools-deps-buster
   commands:
   - clojure -A:test
   - clojure -A:build
-
-- name: rebuild-cache
-  image: drillster/drone-volume-cache
-  volumes:
-  - name: cache
-    path: /cache
-  settings:
-    rebuild: true
-    mount:
-      - ~/.m2
-
-volumes:
-  - name: cache
-    host: 
-      path: /tmp/cache
