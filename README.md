@@ -1,4 +1,6 @@
-# c3
+# c3 
+
+[![Build Status](https://cloud.drone.io/api/badges/HealthSamurai/c3/status.svg)](https://cloud.drone.io/HealthSamurai/c3)
 
 A ultra-minimalistic ci/cd for k8s
 
