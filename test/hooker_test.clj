@@ -12,7 +12,7 @@
 ;; Gitea 
 (def gt (json/parse-string (slurp (io/resource "fixtures/gt-hook.json")) keyword))
 
-(deftest hooker
+#_(deftest hooker
   (def normalized-hook
     {:commit "228ff88162933626efaa82ce3b70b58546824548"
      :branch "master"
