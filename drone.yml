@@ -4,7 +4,7 @@ name: default
 
 steps:
 - name: clojure
-  image: docker pull clojure:openjdk-14-tools-deps-buster
+  image: clojure:openjdk-14-tools-deps-buster
   commands:
   - clojure -A:test
   - clojure -A:build
